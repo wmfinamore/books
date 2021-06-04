@@ -1,0 +1,9 @@
+.env
+*.sqlite3
+.idea
+*.pyc
+\media
+*.exe
+\installers
+\static
+\toDo
