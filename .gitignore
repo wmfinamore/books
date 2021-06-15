@@ -6,4 +6,5 @@
 *.exe
 \installers
 \static
+\staticfiles
 \toDo
