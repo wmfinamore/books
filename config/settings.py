@@ -150,9 +150,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom User Model
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
-# Redirect log in url
-LOGIN_REDIRECT_URL = 'home'
-
 # Redirect log out url
 LOGOUT_REDIRECT_URL = 'home'
 
@@ -160,10 +157,11 @@ LOGOUT_REDIRECT_URL = 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # DJANGO-ALLAUTH CONFIG
+LOGIN_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT = 'home'
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
