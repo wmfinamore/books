@@ -11,6 +11,7 @@ psycopg2-binary = "*"
 python-decouple = "*"
 django-crispy-forms = "*"
 django-allauth = "*"
+environs = {extras = ["django"], version = "==8.0.0"}
 
 [requires]
 python_version = "3.9"
