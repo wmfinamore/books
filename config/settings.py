@@ -32,8 +32,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
+# DEBUG = env.bool("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -101,6 +102,9 @@ DATABASES = {
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT')
     }
+    # Database environs method
+    # ,'default':env.dj_db_url("DATABASE_URL",
+    #                          default="postgres://postgres@db/postgres")
 }
 
 
