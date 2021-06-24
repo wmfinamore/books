@@ -19,16 +19,16 @@ class BookTest(TestCase):
 
     def test_book_list_view(self):
         response = self.client.get(reverse('book_list'))
-        self.assertEqual((response.status_code, 200))
-        self.assertEqual(response, 'Harry Potter')
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Harry Potter')
         self.assertTemplateUsed(response, 'books/book_list.html')
 
     def test_book_detail_view(self):
-        response = self.client.get(self.book.get_absolute_url)
+        response = self.client.get(self.book.get_absolute_url())
         no_response = self.client.get('/books/123455')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
-        self.assertContains(response, 'Harry Potters', )
-        self.assertTemplate(response, 'books/book_detail.html')
+        self.assertContains(response, 'Harry Potter', )
+        self.assertTemplateUsed(response, 'books/book_detail.html')
 
 
