@@ -9,8 +9,8 @@ class ReviewInLine(admin.TabularInline):
 class BookAdmin(admin.ModelAdmin):
     inlines = [
                   ReviewInLine,
-              ],
+              ]
     list_display = ("title", "author", "price")
 
 
-admin.site.register(Book)
+admin.site.register(Book, BookAdmin)
