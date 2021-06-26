@@ -18,4 +18,5 @@ class BookDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     context_object_name = 'book'
     template_name = 'books/book_detail.html'
     login_url = 'account_login'
-    permission_required = 'books.special_status'
+    permission_required = 'books.special_status' # <app_name>.<model_permission_name>
+
