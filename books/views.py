@@ -20,3 +20,8 @@ class BookDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     login_url = 'account_login'
     permission_required = 'books.special_status' # <app_name>.<model_permission_name>
 
+
+class SearchResultsListView(ListView):
+    model = Book
+    context_object_name = 'book_list'
+    template_name = 'books/search_results.html'
