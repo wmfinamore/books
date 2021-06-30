@@ -196,3 +196,11 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 # MEDIA CONFIGURATION
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+# DEBUG TOOLBAR CONFIGURATION
+
+import socket
+
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
