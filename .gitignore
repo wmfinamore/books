@@ -5,7 +5,6 @@
 \media
 *.exe
 \installers
-\static
 \staticfiles
 \toDo
 docker-compose-prod.yml
