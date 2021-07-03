@@ -15,6 +15,7 @@ environs = {extras = ["django"], version = "==8.0.0"}
 pillow = "*"
 django-debug-toolbar = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"
