@@ -14,6 +14,7 @@ django-allauth = "*"
 environs = {extras = ["django"], version = "==8.0.0"}
 pillow = "*"
 django-debug-toolbar = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.9"
